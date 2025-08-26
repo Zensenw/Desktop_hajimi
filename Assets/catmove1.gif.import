@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://dtfyh3lrk74fv"
+path="res://.godot/imported/catmove1.gif-791d8bea64629a3dd3f621159e9af36d.tres"
+
+[deps]
+
+source_file="res://Assets/catmove1.gif"
+dest_files=["res://.godot/imported/catmove1.gif-791d8bea64629a3dd3f621159e9af36d.tres"]
+
+[params]
+

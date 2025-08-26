@@ -1,0 +1,14 @@
+[remap]
+
+importer="import_gif_to_animated_texture"
+type="AnimatedTexture"
+uid="uid://qrs445qq3w7y"
+path="res://.godot/imported/catidle1.gif-89a8013a96185a78923b88a8ce440662.tres"
+
+[deps]
+
+source_file="res://Assets/catidle1.gif"
+dest_files=["res://.godot/imported/catidle1.gif-89a8013a96185a78923b88a8ce440662.tres"]
+
+[params]
+

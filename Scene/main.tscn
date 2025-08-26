@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://c370dpmvuav0b"]
+
+[ext_resource type="Texture2D" uid="uid://djjvpwwvxl7ks" path="res://Assets/catdrop1.gif" id="1_f6udf"]
+[ext_resource type="Script" uid="uid://b7dfauwqjtfqb" path="res://Scripts/cat.gd" id="1_ow1sv"]
+[ext_resource type="Texture2D" uid="uid://qrs445qq3w7y" path="res://Assets/catidle1.gif" id="2_1xcnr"]
+[ext_resource type="Texture2D" uid="uid://dtfyh3lrk74fv" path="res://Assets/catmove1.gif" id="3_ow1sv"]
+[ext_resource type="Texture2D" uid="uid://b16wil6bmi76e" path="res://Assets/catmove2.gif" id="4_75buv"]
+[ext_resource type="Texture2D" uid="uid://cir2fkave4x08" path="res://Assets/catmove3.gif" id="5_c2iwn"]
+[ext_resource type="Texture2D" uid="uid://dbcxx1atvmwao" path="res://Assets/catmove4.gif" id="6_3pt4j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7y4ci"]
+size = Vector2(56, 56)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(30, 30)
+script = ExtResource("1_ow1sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_7y4ci")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="CharacterBody2D"]
+
+[node name="drop" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+scale = Vector2(1.2, 1.30435)
+texture = ExtResource("1_f6udf")
+
+[node name="idle" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_1xcnr")
+
+[node name="move1" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(-3.33786e-06, -1.19209e-06)
+scale = Vector2(1.2, 1.30435)
+texture = ExtResource("3_ow1sv")
+
+[node name="move2l" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(-9.53674e-07, 1.3113e-06)
+scale = Vector2(0.681818, 1.15385)
+texture = ExtResource("4_75buv")
+
+[node name="move3l" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_c2iwn")
+
+[node name="move4r" type="Sprite2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(-7.15256e-07, 1.19209e-06)
+scale = Vector2(1.25, 1.33333)
+texture = ExtResource("6_3pt4j")
