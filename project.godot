@@ -24,11 +24,12 @@ window/size/resizable=false
 window/size/borderless=true
 window/size/always_on_top=true
 window/size/transparent=true
-window/size/window_width_override=80
-window/size/window_height_override=80
+window/size/window_width_override=60
+window/size/window_height_override=60
 window/energy_saving/keep_screen_on=false
-window/stretch/mode="viewport"
 window/per_pixel_transparency/allowed=true
+window/dpi/allow_hidpi=false
+window/stretch/mode="disabled"
 
 [rendering]
 
