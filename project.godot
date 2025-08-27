@@ -14,7 +14,8 @@ config/name="DesktopGJDemo"
 run/main_scene="uid://c370dpmvuav0b"
 config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0.141176, 0.141176, 0.141176, 0)
-config/icon="res://icon.svg"
+config/icon="uid://bns64nkp5g3oi"
+config/windows_native_icon="res://Assets/icons/squarecat.ico"
 
 [display]
 
@@ -27,9 +28,12 @@ window/size/transparent=true
 window/size/window_width_override=60
 window/size/window_height_override=60
 window/energy_saving/keep_screen_on=false
-window/per_pixel_transparency/allowed=true
 window/dpi/allow_hidpi=false
-window/stretch/mode="disabled"
+window/per_pixel_transparency/allowed=true
+window/stretchrenderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+thod.mobile="gl_compatibility"
+viewport/transparent_background=true
 
 [rendering]
 

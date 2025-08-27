@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dbcxx1atvmwao" path="res://Assets/catmove4.gif" id="6_3pt4j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7y4ci"]
-size = Vector2(56, 56)
+size = Vector2(60, 60)
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,7 +28,6 @@ scale = Vector2(1.2, 1.30435)
 texture = ExtResource("1_f6udf")
 
 [node name="idle" type="Sprite2D" parent="CharacterBody2D"]
-visible = false
 texture = ExtResource("2_1xcnr")
 
 [node name="move1" type="Sprite2D" parent="CharacterBody2D"]
@@ -53,4 +52,3 @@ visible = false
 position = Vector2(-7.15256e-07, 1.19209e-06)
 scale = Vector2(1.25, 1.333)
 texture = ExtResource("6_3pt4j")
-flip_h = true

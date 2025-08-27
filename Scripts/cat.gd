@@ -36,12 +36,35 @@ func _on_timer_timeout():
 	movement_tween = create_tween()
 	var current_pos = get_window().position
 	var random_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized()
+	if abs(random_direction.y / random_direction.x) > 1:
+		random_direction.x = 0
+	var target_pos = current_pos + Vector2i(random_direction * 200)
+	# 获取屏幕尺寸
+	var screen_size = DisplayServer.screen_get_size()
+	var window_size = get_window().size
 
-	var target_pos = current_pos + Vector2i(random_direction * 100)
+	# 检查并修正目标位置，确保不超出屏幕范围
+	if target_pos.x < 40:
+		target_pos.x = abs(target_pos.x)
+		random_direction.x = -random_direction.x
+	elif target_pos.x + window_size.x > (screen_size.x-40):
+		target_pos.x = screen_size.x - window_size.x - (target_pos.x + window_size.x - screen_size.x)
+		random_direction.x = -random_direction.x
+
+	if target_pos.y < 40:
+		target_pos.y = abs(target_pos.y)
+		random_direction.y = -random_direction.y
+	elif target_pos.y + window_size.y > (screen_size.y-40):
+		target_pos.y = screen_size.y - window_size.y - (target_pos.y + window_size.y - screen_size.y)
+		random_direction.y = -random_direction.y
+	
 	movement_tween.tween_property(get_window(), "position", target_pos, 3.0)
 	movement_tween.tween_callback(_set_to_idle)
 	print("Moving to New position : ", target_pos)
-	_set_to_move(random_direction)
+	if random_direction.x == 0:
+		_set_to_drop()
+	else:
+		_set_to_move(random_direction)
 
 
 func _set_to_idle():
